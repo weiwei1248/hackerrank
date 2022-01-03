@@ -13,7 +13,6 @@ matches: [
     team2: 'yy'
   }
 ];
-
 **********/
 
 function Main() {
