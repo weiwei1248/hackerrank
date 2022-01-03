@@ -16,17 +16,19 @@ matches: [
 
 **********/
 
-let teams = {};
+function Main() {
+  let teams = {};
 
-//creat an object and count
-matches.map(m => {
-  // if this team exisit +1, or set to 0
-  teams[m.team1] = (teams[m.team1] || 0) + 1;
-  teams[m.team2] = (teams[m.team2] || 0) + 1;
-});
+  //creat an object and count
+  matches.map(m => {
+   // if this team exisit +1, or set to 0
+   teams[m.team1] = (teams[m.team1] || 0) + 1;
+   teams[m.team2] = (teams[m.team2] || 0) + 1;
+  });
 
-//filter if more than 30 times
-return Object.entries(teams)
+  //filter if more than 30 times
+  return Object.entries(teams)
         .filter(([,num]) => num >= 30)
         .map(([team]) => team)
         .sort();
+}
