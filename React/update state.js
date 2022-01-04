@@ -21,7 +21,7 @@ const App = ({array}) => {
 
 	const desc = () => {
 		const newArr = array.sort().reverse();
-		setCurrentArr(...newArr);
+		setCurrentArr([...newArr]);
 		//if push
 		setCurrentArr(prev => [...prev,...newArr])
 	}
