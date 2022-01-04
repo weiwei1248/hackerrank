@@ -21,7 +21,10 @@ const App = ({array}) => {
 
 	const desc = () => {
 		const newArr = array.sort().reverse();
+		//use spread operator to clone
 		setCurrentArr([...newArr]);
+		//usestate callback to make it sycr
+		setCurrentArr(prev => [...newArr])
 		//if push
 		setCurrentArr(prev => [...prev,...newArr])
 	}
